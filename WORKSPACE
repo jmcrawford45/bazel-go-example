@@ -19,7 +19,9 @@ http_archive(
 )
 
 load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
+load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@bazel_gazelle//internal:go_repository.bzl", "go_repository")
+
 
 ############################################################
 # Define your own dependencies here using go_repository.
@@ -30,7 +32,7 @@ go_repository(
         name = "com_github_twitter_scoot",
         importpath = "github.com/twitter/scoot",
         strip_prefix = "one_level",
-        urls = ["https://github.com/jmcrawford45/bazel-go-example/blob/jcrawford/example-resolve-fail/a67632a56e9e6a8b37bb0da60d638e756e7c19ae.tar.gz"],
+        urls = ["https://github.com/jmcrawford45/bazel-go-example/blob/jcrawford/example-resolve-fail/a67632a56e9e6a8b37bb0da60d638e756e7c19ae.tar.gz"]
     )
 
 
