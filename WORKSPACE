@@ -27,24 +27,25 @@ load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 # The first declaration of an external repository "wins".
 ############################################################
 go_repository(
-                name = "com_github_twitter_scoot",
-                importpath = "github.com/twitter/scoot",
-                strip_prefix = "one_level",
-                urls = ["93bb2e82eb6421f8eb1abb5f7f76a5c41f21592d.tar.gz"],
-            )
+        name = "com_github_twitter_scoot",
+        importpath = "github.com/twitter/scoot",
+        strip_prefix = "one_level",
+        urls = ["https://github.com/jmcrawford45/bazel-go-example/blob/jcrawford/example-resolve-fail/a67632a56e9e6a8b37bb0da60d638e756e7c19ae.tar.gz"],
+    )
+
 
 go_repository(
         name = "com_github_sirupsen_logrus",
         importpath = "github.com/sirupsen/logrus",
         strip_prefix = "one_level",
-        urls = ["v1.4.2.tar.gz"],
+        urls = ["https://github.com/jmcrawford45/bazel-go-example/blob/jcrawford/example-resolve-fail/v1.4.2.tar.gz"],
     )
 
 go_repository(
         name = "com_github_apache_thrift",
         importpath = "github.com/apache/thrift",
         strip_prefix = "one_level",
-        urls = ["v0.0.0-20160616201512-0e9fed1e12ed.tar.gz"],
+        urls = ["https://github.com/jmcrawford45/bazel-go-example/blob/jcrawford/example-resolve-fail/v0.0.0-20160616201512-0e9fed1e12ed.tar.gz"],
     )
 
 go_rules_dependencies()
